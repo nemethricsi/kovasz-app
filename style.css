@@ -49,3 +49,55 @@ main {
 h1, h2 {
   padding-top: 20px;
 }
+
+.mobile-nav,
+.collapse {
+  display: none;
+}
+
+@media(max-width: 756px) {
+  nav {
+    display: none;
+  }
+  main {
+    margin-left: 0;
+    padding: 30px 10px;
+  }
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 1;
+    background-color: #2980b9;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .collapse a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 12px;
+      color: #fff;
+      display: block;
+  }
+  .collapse a.topic {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .collapse li {
+    list-style-type: none;
+  }
+  .open {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #3293d2;
+    opacity: 0.98;
+  }
+}
